@@ -1,0 +1,27 @@
+{
+    "name": "adavkay/laravel-soundcloud",
+    "description": "A Soundcloud Service Provider for Laravel 4",
+    "keywords": ["laravel","laravel 4","soundcloud"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "adavkay",
+            "email": "adavkay@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "laravel/framework": ">=4.0",
+        "ise/php-soundcloud": "3.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Adavkay": "src/"
+        }
+    },
+    "extra": {
+        "component": "package",
+        "frameworks": ["Laravel 4"]
+    }
+}
