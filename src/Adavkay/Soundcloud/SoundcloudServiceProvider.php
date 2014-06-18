@@ -11,9 +11,9 @@ class SoundcloudServiceProvider extends ServiceProvider {
     {
         $this->package('adavkay/laravel-soundcloud');
 
-        $this->app['Soundcloud'] = $this->app->share(function($app)
+        $this->app['soundcloud'] = $this->app->share(function($app)
         {
-            $config = $app['config']['soundcloud'];
+            $config = $app['config']['laravel-soundcloud::config'];
             return new Soundcloud\Service( $config['client_id'], $config['client_secret'], $config['redirect_uri'] );
         });
 
