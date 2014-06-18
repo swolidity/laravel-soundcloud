@@ -9,6 +9,8 @@ class SoundcloudServiceProvider extends ServiceProvider {
 
     public function register()
     {
+        $this->package('adavkay/laravel-soundcloud');
+
         $this->app['Soundcloud'] = $this->app->share(function($app)
         {
             $config = $app['config']['soundcloud'];
@@ -18,7 +20,7 @@ class SoundcloudServiceProvider extends ServiceProvider {
         $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Soundcloud', 'Adavkay\Facades\Soundcloud');
+            $loader->alias('Soundcloud', 'Adavkay\Soundcloud\Facades\Soundcloud');
         });
     }
 }
